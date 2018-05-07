@@ -1,0 +1,17 @@
+@import '../../styles/colors.scss';
+@import '../../styles/fonts.scss';
+
+body,
+html {
+  margin: 0;
+  padding: 20px;
+  background: #fff;
+  height: 100%;
+}
+
+body {
+  color: $text-color;
+  height: 100%;
+  font-weight: 500;
+  font-family: $font-main;
+}
