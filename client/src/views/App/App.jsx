@@ -7,7 +7,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <InAppDial name="Matt" number="+61490037586" />
+        <InAppDial name="Matt" url="http://localhost:2255/token" phone="+61490037586" fromPhone="+61490037586" />
       </div>
     );
   }
