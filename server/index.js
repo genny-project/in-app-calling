@@ -41,7 +41,18 @@ app.post( '/call', ( req, res ) => {
     callerId: config.twilio.callerID,
   });
 
-  dial.number( req.body.phone );
+  let phone = req.body.phone;
+  phone = phone.split( ' ' ).join( '' );
+
+  if ( phone.length === 11 ) {
+    phone = `+${phone}`;
+  }
+
+  if ( phone.length === 10 ) {
+    phone = `+61${phone.substring(1)}`;
+  }
+
+  dial.number( phone );
   res.writeHead( 200, {'Content-Type': 'text/xml' });
   res.end( response.toString());
 });
